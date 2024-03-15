@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* LINESeedKR */
+@font-face {
+  font-family: "LINESeedKR";
+  src: url("../source/font/LINESeedKR-Th.otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "LINESeedKR";
+  src: url("../source/font/LINESeedKR-Rg.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "LINESeedKR";
+  src: url("../source/font/LINESeedKR-Bd.otf");
+  font-weight: 900;
+}
