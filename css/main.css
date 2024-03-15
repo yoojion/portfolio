@@ -119,6 +119,8 @@ main::after {
 .section2_aboutme {
   width: 100%;
   height: 525px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .section2_aboutme .aboutme {
   width: calc(100% / 3);
@@ -339,11 +341,12 @@ main::after {
 }
 .section5_design .img_real {
   width: 1040px;
-  height: 290px;
+  height: 420px;
   position: absolute;
   margin-top: 50px;
   background: url(../source/image/img_real.jpg) center center/cover no-repeat;
   left: 0;
+  border-radius: 0 15px 15px 0;
 }
 .section5_design_text .subtitle {
   margin-top: 15px;
@@ -355,11 +358,71 @@ main::after {
 }
 .section5_design_contents_wrap .img {
   width: 60%;
-  height: 290px;
+  height: 420px;
 }
 
 .section5_design_contents_wrap .design {
   width: 40%;
-  height: 290px;
+  height: 420px;
   background: #fff;
+  flex-direction: column;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background: #262626;
+}
+.footer {
+  margin-top: 150px;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+.footer_top {
+  text-align: center;
+}
+.button_wrap2 {
+  gap: 20px;
+  margin-top: 30px;
+}
+.button_wrap_left {
+  flex-direction: column;
+}
+.button_wrap_left .phone {
+  margin-top: 20px;
+}
+
+.button_wrap_right h4:nth-child(2) {
+  margin-top: 20px;
+}
+.button_wrap_left button {
+  border: #ffd6ee 2px solid;
+  border-radius: 8px;
+  background: none;
+  width: 170px;
+  height: 45px;
+  font-family: "LINESeedKR", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 45px;
+  color: #ffd6ee;
+}
+
+.button_wrap_right {
+  flex-direction: column;
+}
+.footer_top h3 {
+  color: #fff;
+}
+.footer_top h5 {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.button_wrap_right > h4 {
+  line-height: 45px;
+  color: #fff;
 }
