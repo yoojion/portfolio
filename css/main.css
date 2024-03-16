@@ -4,20 +4,20 @@
 .df {
   display: flex;
 }
-
 .inner1 {
   width: 100%;
   height: 100%;
   max-width: 1800px;
   margin: auto;
+  padding: 0 30px;
 }
 .inner2 {
   width: 100%;
   height: 100%;
   max-width: 1260px;
   margin: auto;
+  padding: 0 30px;
 }
-
 h2 {
   font-size: 70px;
   font-weight: 900;
@@ -43,7 +43,9 @@ h5 {
   color: #262626;
 }
 
-/* header */
+/* 
+header 
+*/
 .menu_wrap {
   width: 100%;
   height: 80px;
@@ -69,11 +71,13 @@ h5 {
   color: #262626;
 }
 
-/* main */
+/* 
+main 
+*/
 main::after {
   content: "";
   width: 100%;
-  height: 840px;
+  height: clamp(850px, 100vh, 1080px);
   background: #ffd6ee;
   position: absolute;
   top: 0;
@@ -81,7 +85,9 @@ main::after {
   z-index: -1;
 }
 
-/* section1_banner */
+/* 
+section1_banner 
+*/
 .section1_banner {
   width: 100%;
   justify-content: space-between;
@@ -100,7 +106,7 @@ main::after {
 }
 .button_wrap {
   gap: 30px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .button_wrap button {
   border: #4200ff 2px solid;
@@ -108,36 +114,42 @@ main::after {
   background: none;
   width: 170px;
   height: 45px;
+}
+.button_wrap button a {
   font-family: "LINESeedKR", sans-serif;
   font-size: 16px;
   font-weight: 900;
-  line-height: 45px;
   color: #4200ff;
 }
 
-/* section2_aboutme */
+/* 
+section2_aboutme 
+*/
 .section2_aboutme {
+  margin-top: 20px;
+}
+.section2_aboutme .aboutme_wrap {
   width: 100%;
   height: 525px;
   border-radius: 15px;
   overflow: hidden;
 }
-.section2_aboutme .aboutme {
+.aboutme_wrap .aboutme {
   width: calc(100% / 3);
   height: 100%;
   padding: 40px 30px;
   flex-direction: column;
   justify-content: space-between;
 }
-.section2_aboutme .aboutme:nth-child(1) {
+.aboutme_wrap .aboutme:nth-child(1) {
   background: #4200ff;
 }
-.section2_aboutme .aboutme:nth-child(2) {
+.aboutme_wrap .aboutme:nth-child(2) {
   position: relative;
   background: url(../source/image/oh__img69-819x1024.jpg) center center/cover
     no-repeat;
 }
-.section2_aboutme .aboutme:nth-child(2)::after {
+.aboutme_wrap .aboutme:nth-child(2)::after {
   background: rgba(17, 16, 19, 0.5);
   position: absolute;
   content: "";
@@ -146,12 +158,12 @@ main::after {
   top: 0;
   left: 0;
 }
-.section2_aboutme .aboutme:nth-child(3) {
+.aboutme_wrap .aboutme:nth-child(3) {
   position: relative;
   background: url(../source/image/oh__img9-819x1024.jpg) center center/cover
     no-repeat;
 }
-.section2_aboutme .aboutme:nth-child(3)::after {
+.aboutme_wrap .aboutme:nth-child(3)::after {
   background: rgba(17, 16, 19, 0.5);
   position: absolute;
   content: "";
@@ -160,8 +172,7 @@ main::after {
   top: 0;
   left: 0;
 }
-.aboutme > .aboutme_top,
-.des {
+.aboutme_top {
   z-index: 1;
 }
 .aboutme_top > .subtitle {
@@ -172,12 +183,16 @@ main::after {
   margin-top: 10px;
   color: #fff;
 }
-.section2_aboutme > .aboutme > .des {
+.aboutme > .des {
+  z-index: 1;
   color: #fff;
   line-height: 150%;
+  text-align: justify;
 }
 
-/* section3_project */
+/* 
+section3_project 
+*/
 .section3_project {
   margin-top: 150px;
 }
@@ -190,61 +205,52 @@ main::after {
 .section3_project_contents .project_des {
   margin-top: 10px;
 }
-.contents_top {
+
+.section3_project_contents .contents {
   margin-top: 50px;
   width: 100%;
   justify-content: space-between;
+  gap: 3%;
 }
-.contents_top .s {
-  flex-direction: column;
-  width: 394px;
+.contents .s {
+  width: 30%;
 }
-.contents_top .s .img {
+.contents .s .img {
   width: 100%;
   height: 462px;
   border-radius: 15px;
+}
+.contents .b {
+  width: 70%;
+}
+.contents .b .img {
+  width: 100%;
+  height: 462px;
+  border-radius: 15px;
+}
+.top .s .img {
   background: url(../source/image/project_01.jpeg) center center/cover no-repeat;
 }
-.contents_top .b {
-  flex-direction: column;
-  width: 826px;
-}
-.contents_top .b .img {
+.top .b .img {
   width: 100%;
   height: 462px;
   border-radius: 15px;
   background: url(../source/image/project_02.jpeg) center center/cover no-repeat;
 }
-.contents_bottom {
-  margin-top: 50px;
-  width: 100%;
-  justify-content: space-between;
-}
-.contents_bottom .s {
-  flex-direction: column;
-  width: 394px;
-}
-.contents_bottom .s .img {
-  width: 100%;
-  height: 462px;
-  border-radius: 15px;
+.bottom .s .img {
   background: url(../source/image/project_03.jpeg) center center/cover no-repeat;
 }
-.contents_bottom .b {
-  flex-direction: column;
-  width: 826px;
-}
-.contents_bottom .b .img {
-  width: 100%;
-  height: 462px;
-  border-radius: 15px;
+.bottom .b .img {
   background: url(../source/image/project_04.jpeg) center center/cover no-repeat;
 }
 
-/* section4_skills */
+/* 
+section4_skills 
+*/
 .section4_skills {
   margin-top: 150px;
   justify-content: space-between;
+  gap: 3%;
 }
 .section4_skills_text {
   margin-top: 20px;
@@ -258,11 +264,11 @@ main::after {
   width: 70%;
 }
 .section4_skills_contents_top {
-  gap: 50px;
+  gap: 10%;
 }
 .section4_skills_contents_bottom {
   margin-top: 80px;
-  gap: 70px;
+  gap: 10%;
 }
 .section4_skills_contents {
   width: calc(100% / 4);
@@ -334,17 +340,20 @@ main::after {
   margin-top: 20px;
 }
 
-/* section5_design */
+/* 
+section5_design 
+*/
 .section5_design {
   margin-top: 150px;
   position: relative;
 }
 .section5_design .img_real {
-  width: 1040px;
+  width: 55%;
   height: 420px;
   position: absolute;
   margin-top: 50px;
-  background: url(../source/image/img_real.jpg) center center/cover no-repeat;
+  background: url(../source/design/cafe_banner.jpg) center center/cover
+    no-repeat;
   left: 0;
   border-radius: 0 15px 15px 0;
 }
@@ -353,14 +362,12 @@ main::after {
   line-height: 130%;
 }
 .section5_design_contents_wrap {
-  gap: 30px;
   margin-top: 50px;
 }
 .section5_design_contents_wrap .img {
   width: 60%;
   height: 420px;
 }
-
 .section5_design_contents_wrap .design {
   width: 40%;
   height: 420px;
@@ -369,8 +376,14 @@ main::after {
   padding: 20px 0;
   justify-content: space-between;
 }
+.section5_design_contents_wrap .design .des {
+  text-align: justify;
+  line-height: 150%;
+}
 
-/* footer */
+/* 
+footer 
+*/
 footer {
   width: 100%;
   background: #262626;
@@ -407,10 +420,8 @@ footer {
   font-family: "LINESeedKR", sans-serif;
   font-size: 16px;
   font-weight: 900;
-  line-height: 45px;
   color: #ffd6ee;
 }
-
 .button_wrap_right {
   flex-direction: column;
 }
