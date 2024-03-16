@@ -44,6 +44,32 @@ h5 {
 }
 
 /* 
+body
+*/
+.up_btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 35px;
+  right: 35px;
+  width: 50px;
+  height: 50px;
+  background: #fda099;
+  border-radius: 100%;
+  transition: all 0.6s;
+}
+.up_btn a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 900;
+  color: #fff;
+}
+.up_btn:hover {
+  box-shadow: 0px 0px 20px 0px #ff92d2;
+}
+/* 
 header 
 */
 .menu_wrap {
@@ -53,10 +79,14 @@ header
   justify-content: space-between;
 }
 .menu_wrap nav ul {
-  gap: 30px;
+  gap: 50px;
 }
 .menu_wrap nav li {
   text-align: right;
+  transition: all 0.6s;
+}
+.menu_wrap nav li:hover {
+  color: #4200ff;
 }
 .menu_wrap nav li a p:nth-child(1) {
   font-size: 14px;
@@ -68,7 +98,6 @@ header
   font-size: 18px;
   font-weight: 900;
   line-height: 100%;
-  color: #262626;
 }
 
 /* 
@@ -101,8 +130,8 @@ section1_banner
 .section1_banner_right {
   width: 55%;
   height: 600px;
-  background: url(../source/image/oh__img193.1-1024x822.jpg) center center/100%
-    no-repeat;
+  /* background: url(../source/image/oh__img193.1-1024x822.jpg) center center/100%
+    no-repeat; */
 }
 .button_wrap {
   gap: 30px;
@@ -114,12 +143,21 @@ section1_banner
   background: none;
   width: 170px;
   height: 45px;
+  transition: all 0.6s;
 }
 .button_wrap button a {
   font-family: "LINESeedKR", sans-serif;
   font-size: 16px;
   font-weight: 900;
   color: #4200ff;
+  transition: all 0.6s;
+}
+.button_wrap button:hover a {
+  color: #fff;
+}
+.button_wrap button:hover {
+  background: #4200ff;
+  color: #fff;
 }
 
 /* 
