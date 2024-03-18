@@ -284,11 +284,16 @@ section3_project
 }
 .section3_project_contents .button_wrap {
   margin-top: 20px;
+  gap: 15px;
 }
 .section3_project_contents .button_wrap button {
-  width: 130px;
-  height: 45px;
+  width: 120px;
+  height: 40px;
 }
+.section3_project_contents .button_wrap button a{
+  line-height: 40px;
+}
+.section3_project_contents .project_name,.project_des,.button_wrap{margin-left: 5px;}
 
 /* 
 section4_skills 
