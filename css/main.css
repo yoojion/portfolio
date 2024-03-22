@@ -471,7 +471,7 @@ section5_design
   height: 420px;
   position: absolute;
   margin-top: 50px;
-  background: url(../source/design/cafe_banner.jpg) center center/cover
+  background: url(../source/design/cafe_banner_mockup_.jpg) center center/cover
     no-repeat;
   left: 0;
   border-radius: 0 15px 15px 0;
@@ -498,6 +498,30 @@ section5_design
 .section5_design_contents_wrap .design .des {
   text-align: justify;
   line-height: 150%;
+}
+/* 라이트박스스타일 */
+#lightbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+}
+#lightboxImage {
+  width: 80%;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  /* background:red; */
+  overflow-y: auto;
+}
+.all_scroll_fixed {
+  overflow: hidden;
 }
 
 /* 
