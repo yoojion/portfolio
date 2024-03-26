@@ -141,7 +141,7 @@ section1_banner
 .section1_banner_right {
   width: 55%;
   height: 600px;
-  background: url(../source/image/jiwon.png) 60% 10%/120% no-repeat;
+  background: url(../source/image/jiwon.png) 70% 15%/125% no-repeat;
 }
 .button_wrap {
   gap: 30px;
