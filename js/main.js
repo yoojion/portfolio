@@ -46,3 +46,23 @@ lightbox.on("click", function () {
   lightbox.css("display", "none");
   $("html").removeClass("all_scroll_fixed");
 });
+
+
+/* mouse */
+const el = document.querySelector(".followAnimation");
+let mouseX = 0;
+let mouseY = 0;
+let currentX = 0;
+let currentY = 0;
+document.addEventListener("mousemove", (e) => {
+  console.log(mouseX, mouseY);
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+tick();
+function tick() {
+  requestAnimationFrame(tick);
+  currentX += (mouseX - currentX) * 0.1;
+  currentY += (mouseY - currentY) * 0.1;
+  el.style.transform = `translate(${currentX}px,${currentY}px)`;
+}
