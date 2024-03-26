@@ -157,9 +157,9 @@ section1_banner
 /* 
 section2_aboutme 
 */
-.section2_aboutme {
-  /* margin-top: 20px; */
-}
+/* .section2_aboutme {
+  margin-top: 20px;
+} */
 .section2_aboutme .aboutme_wrap {
   width: 100%;
   height: 525px;
