@@ -1,4 +1,6 @@
-/* skill-bar */
+/* 
+skill-bar 
+*/
 
 const circles = document.querySelectorAll(".circular-pbar");
 
@@ -30,7 +32,9 @@ circles.forEach((el) => {
   );
 });
 
-/* design */
+/* 
+design 
+*/
 const pics = $(".pic");
 console.log(pics);
 const lightbox = $("#lightbox");
@@ -47,8 +51,9 @@ lightbox.on("click", function () {
   $("html").removeClass("all_scroll_fixed");
 });
 
-
-/* mouse */
+/* 
+mouse 
+*/
 const el = document.querySelector(".followAnimation");
 let mouseX = 0;
 let mouseY = 0;
@@ -66,3 +71,39 @@ function tick() {
   currentY += (mouseY - currentY) * 0.1;
   el.style.transform = `translate(${currentX}px,${currentY}px)`;
 }
+
+/* 
+arrow_up 
+*/
+(() => {
+  const arrowUp = document.querySelector(".arrow-up");
+  const top = document.querySelector("#top");
+
+  document.addEventListener("scroll", function () {
+    if (window.scrollY > 200) {
+      arrowUp.classList.add("visible");
+    } else {
+      arrowUp.classList.remove("visible");
+    }
+  });
+  arrowUp.addEventListener("click", function () {
+    top.scrollIntoView({ behavior: "smooth" });
+  });
+})();
+
+/* 
+btns_menu
+ */
+const btnsMenu = document.querySelector(".btns_menu");
+btnsMenu.addEventListener("click", function (e) {
+  e.preventDefault();
+  const target = e.target;
+  console.log(e.target);
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
+  }
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({ behavior: "smooth", block: "start" });
+  btnsMenu.classList.remove("open");
+});

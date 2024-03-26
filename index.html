@@ -9,11 +9,11 @@
   </head>
 
   <body>
-    <!-- <div class="up_btn">
-      <a href="#">TOP</a>
-    </div> -->
-    <header>
-      <div class="followAnimation">(✿◡‿◡)</div>
+    <div class="arrow-up">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <header id="top">
+
       <div class="menu_wrap inner1 df">
         <h1>
           <a href="https://yoojion.github.io/portfolio/"
@@ -21,35 +21,35 @@
           /></a>
         </h1>
         <nav>
-          <ul class="df">
-            <li>
+          <ul class="df btns_menu">
+            <li data-link="#about">
               <a href="#">
-                <p>01</p>
-                <p>About Me</p>
+                <span>01</span>
+                <span>About Me</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <p>02</p>
-                <p>Projects</p>
+                <span data-link="#projects">02</span>
+                <span data-link="#projects">Projects</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <p>03</p>
-                <p>Skills</p>
+                <span data-link="#skills">03</span>
+                <span data-link="#skills">Skills</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <p>04</p>
-                <p>Design</p>
+                <span data-link="#design">04</span>
+                <span data-link="#design">Design</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <p>05</p>
-                <p>Contact Me</p>
+                <span data-link="#contact">05</span>
+                <span data-link="#contact">Contact Me</span>
               </a>
             </li>
           </ul>
@@ -62,7 +62,11 @@
           <h2>Like a wave! <br />publisher <br />portfolio.</h2>
           <div class="button_wrap df">
             <button class="resume">
-              <a href="#" target="_blank">Resume</a>
+              <a
+                href="https://drive.google.com/file/d/1qX-X5KJcLqs1EwqrnrucbPANv3LSnjvN/view?usp=drive_link"
+                target="_blank"
+                >Resume</a
+              >
             </button>
             <button class="git">
               <a href="https://github.com/yoojion/portfolio.git" target="_blank"
@@ -74,7 +78,7 @@
         <div class="section1_banner_right"></div>
       </section>
       <section class="section2_aboutme inner2">
-        <div class="aboutme_wrap df">
+        <div class="aboutme_wrap df" id="about">
           <div class="aboutme df">
             <div class="aboutme_top">
               <h5 class="subtitle">About Me</h5>
@@ -104,7 +108,7 @@
           </div>
         </div>
       </section>
-      <section class="section3_project inner2">
+      <section class="section3_project inner2" id="projects">
         <div class="section3_project_text">
           <h5 class="subtitle">PROJECTS</h5>
           <h3 class="title">Web standard / Response /scss</h3>
@@ -118,17 +122,17 @@
               <div class="button_wrap df">
                 <button class="document project1">
                   <a
-                    href="https://drive.google.com/file/d/1F6H0GIQcQiOkwZBdGkfuhrRLmugrFCIu/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1_Qro_4JjZ7jQ1XXfBIcokZSB1BvZrnPL/view?usp=drive_link"
                     target="_blank"
                     >기획서 보기</a
                   >
                 </button>
-                <button class="document project2">
+                <button class="document project1">
                   <a href="https://yoojion.github.io/project1/" target="_blank"
                     >사이트 보기</a
                   >
                 </button>
-                <button class="document project2">
+                <button class="document project1">
                   <a
                     href="https://github.com/yoojion/project1.git"
                     target="_blank"
@@ -203,7 +207,7 @@
           </div>
         </div>
       </section> -->
-      <section class="section4_skills inner2 df">
+      <section class="section4_skills inner2 df"  id="skills">
         <div class="section4_skills_text">
           <h3 class="title">SKILLS</h3>
           <h5 class="subtitle">
@@ -265,7 +269,7 @@
           </div>
         </div>
       </section>
-      <section class="section5_design">
+      <section class="section5_design" id="design">
         <div class="section5_design_text inner2">
           <h3 class="title">DESIGN</h3>
           <h5 class="subtitle">디자인작업물</h5>
@@ -295,7 +299,7 @@
       </section>
     </main>
     <footer>
-      <div class="footer inner2 df">
+      <div class="footer inner2 df" id="contact">
         <div class="footer_top">
           <h3 class="title">CONTACT ME</h3>
           <!-- <h5 class="subtitle">유지원</h5> -->
@@ -314,6 +318,7 @@
         </div>
       </div>
     </footer>
+    <div class="followAnimation">(✿◡‿◡)</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script

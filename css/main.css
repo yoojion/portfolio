@@ -44,7 +44,7 @@ h5 {
 }
 
 /* 
-body
+followAnimation
 */
 .followAnimation {
   position: fixed;
@@ -54,30 +54,11 @@ body
   will-change: transform;
   color: #4200ff;
   transform: translate(0, 0);
+  user-select: none;
+  pointer-events: none;
+  cursor: none;
 }
-.up_btn {
-  position: fixed;
-  z-index: 999;
-  bottom: 35px;
-  right: 35px;
-  width: 50px;
-  height: 50px;
-  background: #fda099;
-  border-radius: 100%;
-  transition: all 0.6s;
-}
-.up_btn a {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  font-weight: 900;
-  color: #fff;
-}
-.up_btn:hover {
-  box-shadow: 0px 0px 20px 0px #ff92d2;
-}
+
 /* 
 header 
 */
@@ -97,16 +78,18 @@ header
 .menu_wrap nav li:hover {
   color: #4200ff;
 }
-.menu_wrap nav li a p:nth-child(1) {
+.menu_wrap nav li a span:nth-child(1) {
   font-size: 14px;
   font-weight: 600;
   line-height: 100%;
+  display: block;
 }
-.menu_wrap nav li a p:nth-child(2) {
+.menu_wrap nav li a span:nth-child(2) {
   margin-top: 5px;
   font-size: 18px;
   font-weight: 900;
   line-height: 100%;
+  display: block;
 }
 
 /* 
@@ -469,6 +452,7 @@ section4_skills
 .circular-pbar-counter::after {
   content: "%";
 }
+
 /* 
 section5_design 
 */
@@ -509,7 +493,10 @@ section5_design
   text-align: justify;
   line-height: 150%;
 }
-/* 라이트박스스타일 */
+
+/* 
+라이트박스스타일 
+*/
 #lightbox {
   position: fixed;
   width: 100%;
@@ -560,7 +547,6 @@ footer {
 .button_wrap_left .phone {
   margin-top: 20px;
 }
-
 .button_wrap_right h4:nth-child(2) {
   margin-top: 20px;
 }
@@ -586,8 +572,38 @@ footer {
   margin-top: 15px;
   color: #fff;
 }
-
 .button_wrap_right > h4 {
   line-height: 45px;
   color: #fff;
+}
+
+/* 
+arrow_up 
+*/
+.arrow-up {
+  position: fixed;
+  z-index: 999;
+  bottom: 35px;
+  right: 35px;
+  width: 50px;
+  height: 50px;
+  background: #fda099;
+  border-radius: 100%;
+  transition: all 0.6s;
+  opacity: 0;
+}
+.arrow-up i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 900;
+  color: #fff;
+}
+.arrow-up:hover {
+  box-shadow: 0px 0px 20px 0px #ff92d2;
+}
+.arrow-up.visible {
+  opacity: 1;
 }
