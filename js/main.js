@@ -36,7 +36,6 @@ circles.forEach((el) => {
 design 
 */
 const pics = $(".pic");
-console.log(pics);
 const lightbox = $("#lightbox");
 const lightboxImage = $("#lightboxImage");
 pics.on("click", function (e) {
@@ -60,7 +59,6 @@ let mouseY = 0;
 let currentX = 0;
 let currentY = 0;
 document.addEventListener("mousemove", (e) => {
-  console.log(mouseX, mouseY);
   mouseX = e.clientX;
   mouseY = e.clientY;
 });
@@ -98,7 +96,6 @@ const btnsMenu = document.querySelector(".btns_menu");
 btnsMenu.addEventListener("click", function (e) {
   e.preventDefault();
   const target = e.target;
-  console.log(e.target);
   const link = target.dataset.link;
   if (link == null) {
     return;
