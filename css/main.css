@@ -411,16 +411,13 @@ section3_project
   box-shadow: 0 5px 15px rgba(17, 16, 19, 0.06);
 }
 .section3_project_contents .contents .n1 {
-  background: url(../source/image/sec3_1.jpg) center center/contain
-    no-repeat;
+  background: url(../source/image/sec3_1.jpg) center center/contain no-repeat;
 }
 .section3_project_contents .contents .n2 {
-  background: url(../source/image/sec3_2.jpg) center center/contain
-    no-repeat;
+  background: url(../source/image/sec3_2.jpg) center center/contain no-repeat;
 }
 .section3_project_contents .contents .n3 {
-  background: url(../source/image/sec3_3.jpg) center center/contain
-    no-repeat;
+  background: url(../source/image/sec3_3.jpg) center center/contain no-repeat;
 }
 .section3_project_contents .button_wrap {
   margin-top: 20px;

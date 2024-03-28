@@ -1,9 +1,7 @@
 /* 
 skill-bar 
 */
-
 const circles = document.querySelectorAll(".circular-pbar");
-
 circles.forEach((el) => {
   const counter = el.querySelector(".circular-pbar-counter");
   const tg = counter.textContent + "%";
@@ -22,7 +20,6 @@ circles.forEach((el) => {
       },
     },
   });
-
   tm.to(
     el,
     {
@@ -76,7 +73,6 @@ arrow_up
 (() => {
   const arrowUp = document.querySelector(".arrow-up");
   const top = document.querySelector("#top");
-
   document.addEventListener("scroll", function () {
     if (window.scrollY > 200) {
       arrowUp.classList.add("visible");
