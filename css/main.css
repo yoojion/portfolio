@@ -220,69 +220,89 @@ section2_aboutme
   line-height: 150%;
   text-align: justify;
 } */
+
 .section2_aboutme .aboutme_wrap {
   width: 100%;
   height: 525px;
   border-radius: 15px;
-  overflow: hidden;
+  background: linear-gradient(#fbf0f1 0, #f7ecff 100%);
 }
 .aboutme_wrap .aboutme {
   width: calc(100% / 3);
   height: 100%;
   padding: 40px 30px;
   flex-direction: column;
-  justify-content: space-between;
-}
-.aboutme_wrap .aboutme {
-  background: linear-gradient(180deg, #fbf0f1 0, #f7ecff 100%);
   border-right: 1px solid #dfdfdf7d;
 }
 .aboutme_wrap .aboutme:nth-child(3) {
   border-right: none;
 }
+.aboutme_top .deco_line {
+  width: 86px;
+  height: 1.5px;
+  background: #4200ff;
+}
+.aboutme_top .deco_line2 {
+  width: 140px;
+  height: 1.5px;
+  background: #262626;
+  opacity: 0.6;
+}
+.aboutme_top .deco_line3 {
+  width: 268px;
+  height: 1.5px;
+  background: #262626;
+  opacity: 0.6;
+}
 .aboutme_top > .subtitle {
+  margin-top: 10px;
   color: #4200ff;
 }
-.aboutme_top .sm {
+.aboutme_top .subtitle.sm2 {
   color: #262626;
+  opacity: 0.8;
 }
 .aboutme_top > .title {
-  line-height: 130%;
-  margin-top: 25px;
-  color: #4200ff;
+  margin-top: 15px;
+  line-height: 140%;
 }
-.aboutme_top .tm {
+.aboutme_top .title.tm {
+  color: #4200ff;
   font-size: 40px;
 }
-.aboutme_top .tm2 {
-  color: #262626;
-}
+
 .aboutme > .des {
-  color: #4200ff;
-  line-height: 150%;
-  font-size: 23px;
-  font-weight: 600;
-  line-height: 100%;
   color: #262626;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 30px;
 }
 .aboutme > .des > .des_wrap {
-  padding-top: 15px;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
+  line-height: 27px;
+}
+.aboutme .des_wrap_1 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #262626;
+}
+.aboutme .des_wrap_2 {
+  text-align: justify;
+  width: 17%;
+}
+.des_wrap_top {
   gap: 15px;
   align-items: center;
-  height: 40px;
-  line-height: 40px;
 }
-.aboutme > .des > .des_wrap > .des_wrap_1{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #4200ff;
-  line-height: 40px;
-
-}
-.aboutme > .des > .des_wrap > .des_wrap_2{
-  text-align:justify;
-  line-height: 40px;
+.des_wrap_5 {
+  font-size: 20px;
+  line-height: 140%;
+  padding-top: 5px;
 }
 
 /* 
