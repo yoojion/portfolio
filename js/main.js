@@ -101,15 +101,15 @@ btnsMenu.addEventListener("click", function (e) {
   btnsMenu.classList.remove("open");
 });
 
-
-
-
-
+/* 
+section3_project_contents
+ */
 const pc = document.querySelector(".section3_project_contents .pc");
-const left = document.querySelector(".section3_project_contents .contents_left");
+const left = document.querySelector(
+  ".section3_project_contents .contents_left"
+);
 const pcS = pc.querySelector(".screen");
 const pcM = pc.querySelector(".mask");
-
 
 const aniUp = (mask, screen) => {
   let newH1 = mask.clientHeight;
@@ -121,7 +121,7 @@ const aniDown = (screen) => {
   gsap.to(screen, { y: 0, duration: 0.5 });
 };
 ScrollTrigger.create({
-  trigger: ".sec3",
+  trigger: ".section3_project_contents",
   start: "top bottom",
   end: "bottom top",
   scrub: 0.5,
