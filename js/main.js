@@ -1,5 +1,5 @@
-/* 
-skill-bar 
+/*
+skill-bar
 */
 const circles = document.querySelectorAll(".circular-pbar");
 circles.forEach((el) => {
@@ -29,8 +29,8 @@ circles.forEach((el) => {
   );
 });
 
-/* 
-design 
+/*
+design
 */
 const pics = $(".pic");
 const lightbox = $("#lightbox");
@@ -47,8 +47,8 @@ lightbox.on("click", function () {
   $("html").removeClass("all_scroll_fixed");
 });
 
-/* 
-mouse 
+/*
+mouse
 */
 const el = document.querySelector(".followAnimation");
 let mouseX = 0;
@@ -67,8 +67,8 @@ function tick() {
   el.style.transform = `translate(${currentX}px,${currentY}px)`;
 }
 
-/* 
-arrow_up 
+/*
+arrow_up
 */
 (() => {
   const arrowUp = document.querySelector(".arrow-up");
@@ -85,7 +85,7 @@ arrow_up
   });
 })();
 
-/* 
+/*
 btns_menu
  */
 const btnsMenu = document.querySelector(".btns_menu");
@@ -101,7 +101,25 @@ btnsMenu.addEventListener("click", function (e) {
   btnsMenu.classList.remove("open");
 });
 
-/* 
+/*
+section1_banner
+ */
+(() => {
+  document.addEventListener("mousemove", parallax);
+
+  function parallax(e) {
+    this.querySelectorAll(
+      ".section1_banner_right .orb,.section1_banner_right .profile"
+    ).forEach((el) => {
+      const pos = el.getAttribute("data-speed");
+      const x = (window.innerWidth - e.pageX * pos) / 90;
+      const y = (window.innerHeight - e.pageY * pos) / 90;
+      el.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    });
+  }
+})();
+
+/*
 section3_project_contents
  */
 const pc = document.querySelector(".section3_project_contents .pc");
@@ -128,6 +146,32 @@ ScrollTrigger.create({
   onEnter: () => {
     pcM.addEventListener("mouseenter", () => aniUp(pcM, pcS));
     pcM.addEventListener("mouseleave", () => aniDown(pcS));
+    gsap.fromTo(left, { xPercent: -100 }, { xPercent: 0, duration: 1 });
+  },
+});
+
+const pc2 = document.querySelector(".sec3-2 .pc");
+const left2 = document.querySelector(".sec3-2 .contents_left");
+const pcS2 = pc2.querySelector(".sec3-2 .screen");
+const pcM2 = pc2.querySelector(".sec3-2 .mask");
+
+const aniUp2 = (mask, screen) => {
+  let newH11 = mask.clientHeight;
+  let newH22 = screen.clientHeight;
+  let height = newH11 - newH22;
+  gsap.to(screen, { y: height, duration: 0.5 });
+};
+const aniDown2 = (screen) => {
+  gsap.to(screen, { y: 0, duration: 0.5 });
+};
+ScrollTrigger.create({
+  trigger: ".sec3-2",
+  start: "top bottom",
+  end: "bottom top",
+  scrub: 0.5,
+  onEnter: () => {
+    pcM2.addEventListener("mouseenter", () => aniUp(pcM2, pcS2));
+    pcM2.addEventListener("mouseleave", () => aniDown(pcS2));
     gsap.fromTo(left, { xPercent: -100 }, { xPercent: 0, duration: 1 });
   },
 });

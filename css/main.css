@@ -92,8 +92,8 @@ header
   display: block;
 }
 
-/* 
-main 
+/*
+main
 */
 main::after {
   content: "";
@@ -101,19 +101,27 @@ main::after {
   /* height: 850px; */
   height: clamp(850px, 100vh, 1080px);
   background: #ffd6ee;
+  background: radial-gradient(
+    66.75% 46.93% at 64.08% 55.23%,
+    rgb(255, 214, 238) 48%,
+    rgb(255, 219, 240) 100%
+  );
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
 }
-
-/* 
-section1_banner 
+/*
+section1_banner
 */
 .section1_banner {
   width: 100%;
   justify-content: space-between;
   margin-top: 20px;
+}
+.section1_banner h2 {
+  position: relative;
+  z-index: 9;
 }
 .section1_banner_left {
   width: 40%;
@@ -122,9 +130,49 @@ section1_banner
   justify-content: center;
 }
 .section1_banner_right {
+  position: relative;
   width: 55%;
   height: 600px;
-  background: url(../source/image/jiwon.png) 70% 15%/125% no-repeat;
+}
+.profile {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../source/image/jiwon.png) 90% 12% / 115% no-repeat;
+  filter: drop-shadow(10px -50px 50px hsla(325, 39%, 55%, 0.2));
+}
+.section1_banner_right .orb {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(10px 30px 50px hsla(325, 39%, 55%, 0.5));
+}
+.section1_banner_right .o1 {
+  top: 50%;
+  left: 0;
+  background-image: url(../source/image/orb01.png);
+}
+.section1_banner_right .o2 {
+  top: 0;
+  right: 0;
+  background-image: url(../source/image/orb02.png);
+  height: 200px;
+}
+.section1_banner_right .o3 {
+  top: 0%;
+  left: -30%;
+  width: 200px;
+  height: 200px;
+  background-image: url(../source/image/orb03.png);
+  z-index: 1;
+}
+.section1_banner_right .o4 {
+  top: 50%;
+  left: 100%;
+  background-image: url(../source/image/orb04.png);
 }
 .button_wrap {
   gap: 30px;
@@ -156,76 +204,14 @@ section1_banner
   color: #fff;
 }
 
-/* 
-section2_aboutme 
-*/
-/* .section2_aboutme .aboutme_wrap {
-  width: 100%;
-  height: 525px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.aboutme_wrap .aboutme {
-  width: calc(100% / 3);
-  height: 100%;
-  padding: 40px 30px;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.aboutme_wrap .aboutme:nth-child(1) {
-  background: #4200ff;
-}
-.aboutme_wrap .aboutme:nth-child(2) {
-  position: relative;
-  background: url(../source/image/oh__img69-819x1024.jpg) center center/cover
-    no-repeat;
-}
-.aboutme_wrap .aboutme:nth-child(2)::after {
-  background: rgba(17, 16, 19, 0.5);
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.aboutme_wrap .aboutme:nth-child(3) {
-  position: relative;
-  background: url(../source/image/oh__img9-819x1024.jpg) center center/cover
-    no-repeat;
-}
-.aboutme_wrap .aboutme:nth-child(3)::after {
-  background: rgba(17, 16, 19, 0.5);
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.aboutme_top {
-  z-index: 1;
-}
-.aboutme_top > .subtitle {
-  color: #fff;
-}
-.aboutme_top > .title {
-  line-height: 130%;
-  margin-top: 10px;
-  color: #fff;
-}
-.aboutme > .des {
-  z-index: 1;
-  color: #fff;
-  line-height: 150%;
-  text-align: justify;
-} */
-
 .section2_aboutme .aboutme_wrap {
   width: 100%;
+  position: relative;
+  z-index: 99999;
   height: 525px;
   border-radius: 15px;
   background: linear-gradient(#fbf0f1 0, #f7ecff 100%);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .aboutme_wrap .aboutme {
   width: calc(100% / 3);
@@ -270,7 +256,6 @@ section2_aboutme
   color: #4200ff;
   font-size: 40px;
 }
-
 .aboutme > .des {
   color: #262626;
   font-size: 18px;
@@ -305,10 +290,130 @@ section2_aboutme
   padding-top: 5px;
 }
 
-/* 
-section3_project 
+/*
+section3_project
 */
 .section3_project {
+  margin-top: 100px;
+  padding: 50px 0;
+  background-color: rgba(150, 144, 162, 0.06);
+}
+.section3_project div.title {
+  margin: 50px 0;
+}
+.section3_project h5 {
+  padding-bottom: 15px;
+}
+.section3_project_contents .project_des {
+  margin-top: 10px;
+}
+.section3_project_contents .contents {
+  width: 100%;
+  min-height: 500px;
+  margin-bottom: 150px;
+  gap: 3%;
+}
+.section3_project_contents .contents .img {
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: absolute;
+  overflow: hidden;
+  /* box-shadow: 0 5px 15px rgba(17, 16, 19, 0.06); */
+  /* border: 1px solid; */
+}
+.contents_left {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(17, 16, 19, 0.06);
+  border-radius: 0 0 10px 10px;
+}
+
+.contents_right {
+  position: relative;
+  width: 40%;
+  height: 600px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mockup.pc {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.mockup.pc .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 40px;
+  z-index: 9999;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+}
+.mockup.pc .mask img {
+  display: block;
+  width: 100%;
+}
+.section3_project_contents .contents .n1 {
+  background: url(../source/image/screen_2.png);
+  background-size: 100%;
+}
+.section3_project_contents .button_wrap {
+  margin-top: 20px;
+  gap: 10px;
+}
+.section3_project_contents .button_wrap button {
+  width: 100%;
+  height: 40px;
+}
+.section3_project_contents .button_wrap button a {
+  line-height: 40px;
+}
+.con0000 {
+  margin-top: 20px;
+}
+.con1111 {
+  margin-top: 20px;
+}
+.con1111 .des_wrap {
+  gap: 15px;
+  justify-content: space-between;
+}
+.con1111 .des_wrap .des_wrap_1 {
+  color: #888888;
+}
+.con2222 {
+  margin-top: 20px;
+  width: 100%;
+  line-height: 170%;
+  text-align: justify;
+}
+.con2222 a {
+  text-decoration: underline;
+  font-weight: 900;
+}
+.con2222 a:hover {
+  color: #4200ff;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background: #d5d5d5;
+}
+.section3_project_contents .contents .n2 {
+  background: url(../source/image/screen_1-2.png);
+  background-size: 100%;
+}
+.sec3-2 .button_wrap span {
+  width: calc(100% / 2);
+}
+/* .section3_project {
   margin-top: 100px;
   padding: 50px 0;
   background-color: rgba(150, 144, 162, 0.06);
@@ -426,7 +531,12 @@ section3_project
 }
 .sec3-2 .button_wrap span {
   width: calc(100% / 2);
-}
+} */
+
+/* .section3_project_contents h2{
+  color: #ff92d2;
+} */
+
 /* 
 section4_skills 
 */
