@@ -100,3 +100,34 @@ btnsMenu.addEventListener("click", function (e) {
   scrollTo.scrollIntoView({ behavior: "smooth", block: "start" });
   btnsMenu.classList.remove("open");
 });
+
+
+
+
+
+const pc = document.querySelector(".section3_project_contents .pc");
+const left = document.querySelector(".section3_project_contents .contents_left");
+const pcS = pc.querySelector(".screen");
+const pcM = pc.querySelector(".mask");
+
+
+const aniUp = (mask, screen) => {
+  let newH1 = mask.clientHeight;
+  let newH2 = screen.clientHeight;
+  let height = newH1 - newH2;
+  gsap.to(screen, { y: height, duration: 0.5 });
+};
+const aniDown = (screen) => {
+  gsap.to(screen, { y: 0, duration: 0.5 });
+};
+ScrollTrigger.create({
+  trigger: ".sec3",
+  start: "top bottom",
+  end: "bottom top",
+  scrub: 0.5,
+  onEnter: () => {
+    pcM.addEventListener("mouseenter", () => aniUp(pcM, pcS));
+    pcM.addEventListener("mouseleave", () => aniDown(pcS));
+    gsap.fromTo(left, { xPercent: -100 }, { xPercent: 0, duration: 1 });
+  },
+});
