@@ -158,8 +158,8 @@ const pcM2 = pc2.querySelector(".sec3-2 .mask");
 const aniUp2 = (mask, screen) => {
   let newH11 = mask.clientHeight;
   let newH22 = screen.clientHeight;
-  let height = newH11 - newH22;
-  gsap.to(screen, { y: height, duration: 0.5 });
+  let height33 = newH11 - newH22;
+  gsap.to(screen, { y: height33, duration: 0.5 });
 };
 const aniDown2 = (screen) => {
   gsap.to(screen, { y: 0, duration: 0.5 });
@@ -170,8 +170,34 @@ ScrollTrigger.create({
   end: "bottom top",
   scrub: 0.5,
   onEnter: () => {
-    pcM2.addEventListener("mouseenter", () => aniUp(pcM2, pcS2));
-    pcM2.addEventListener("mouseleave", () => aniDown(pcS2));
-    gsap.fromTo(left, { xPercent: -100 }, { xPercent: 0, duration: 1 });
+    pcM2.addEventListener("mouseenter", () => aniUp2(pcM2, pcS2));
+    pcM2.addEventListener("mouseleave", () => aniDown2(pcS2));
+    gsap.fromTo(left2, { xPercent: 100 }, { xPercent: 0, duration: 1 });
+  },
+});
+
+const pc3 = document.querySelector(".sec3-3 .pc");
+const left3 = document.querySelector(".sec3-3 .contents_left");
+const pcS3 = pc3.querySelector(".sec3-3 .screen");
+const pcM3 = pc3.querySelector(".sec3-3 .mask");
+
+const aniUp3 = (mask, screen) => {
+  let newH111 = mask.clientHeight;
+  let newH222 = screen.clientHeight;
+  let height333 = newH111 - newH222;
+  gsap.to(screen, { y: height333, duration: 0.5 });
+};
+const aniDown3 = (screen) => {
+  gsap.to(screen, { y: 0, duration: 0.5 });
+};
+ScrollTrigger.create({
+  trigger: ".sec3-3",
+  start: "top bottom",
+  end: "bottom top",
+  scrub: 0.5,
+  onEnter: () => {
+    pcM3.addEventListener("mouseenter", () => aniUp3(pcM3, pcS3));
+    pcM3.addEventListener("mouseleave", () => aniDown3(pcS3));
+    gsap.fromTo(left3, { xPercent: -100 }, { xPercent: 0, duration: 1 });
   },
 });
