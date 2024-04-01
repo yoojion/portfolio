@@ -159,16 +159,16 @@ const aniUp2 = (mask, screen) => {
   let newH11 = mask.clientHeight;
   let newH22 = screen.clientHeight;
   let height33 = newH11 - newH22;
-  gsap.to(screen, { y: height33, duration: 0.5 });
+  gsap.to(screen, { y: height33, duration: 2 });
 };
 const aniDown2 = (screen) => {
-  gsap.to(screen, { y: 0, duration: 0.5 });
+  gsap.to(screen, { y: 0, duration: 2 });
 };
 ScrollTrigger.create({
   trigger: ".sec3-2",
   start: "top bottom",
   end: "bottom top",
-  scrub: 0.5,
+  scrub: 50,
   onEnter: () => {
     pcM2.addEventListener("mouseenter", () => aniUp2(pcM2, pcS2));
     pcM2.addEventListener("mouseleave", () => aniDown2(pcS2));
