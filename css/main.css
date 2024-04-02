@@ -1,6 +1,9 @@
 @charset "utf-8";
 @import url(./reset.css);
 
+body {
+  overflow-x: hidden;
+}
 .df {
   display: flex;
 }
@@ -211,8 +214,8 @@ section1_banner
 .section2_aboutme .aboutme_wrap {
   width: 100%;
   position: relative;
-  z-index: 99999;
-  height: 525px;
+  z-index: 9;
+  height: 500px;
   border-radius: 15px;
   background: linear-gradient(#fbf0f1 0, #f7ecff 100%);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -231,6 +234,7 @@ section1_banner
   width: 86px;
   height: 1.5px;
   background: #4200ff;
+  opacity: 0.6;
 }
 .aboutme_top .deco_line2 {
   width: 140px;
@@ -316,6 +320,7 @@ section3_project
   min-height: 500px;
   margin-bottom: 150px;
   gap: 3%;
+  justify-content: space-between;
 }
 .section3_project_contents .contents .img {
   width: 100%;
@@ -385,6 +390,9 @@ section3_project
 }
 .con1111 .des_wrap .des_wrap_1 {
   color: #888888;
+}
+.con1111 .des_wrap .des_wrap_2 {
+  text-align: right;
 }
 .con2222 {
   /* margin-top: 20px; */
