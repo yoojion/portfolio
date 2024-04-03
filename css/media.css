@@ -252,7 +252,7 @@
   .mockup.pc .mask {
     top: 55px;
   }
-  .section3_project_contents .contents{
+  .section3_project_contents .contents {
     margin-bottom: 100px;
   }
   .section4_skills_contents_wrap {
@@ -274,50 +274,117 @@
   .followAnimation {
     display: none;
   }
-
+  main::after {
+    height: 100vh;
+  }
   .menu_wrap {
-    height: 40px;
+    height: 60px;
     margin-top: 20px;
     padding: 0 20px;
+    width: 100%;
+  }
+  .menu_wrap h1 {
+    width: 100%;
+    text-align: center;
   }
   .menu_wrap img {
-    height: 40px;
+    height: 60px;
   }
-  .menu_wrap nav{
+  .menu_wrap nav {
     display: none;
   }
-  .section1_banner_right{
+  .section1_banner_right {
     display: none;
   }
   .section1_banner_left {
     width: 100%;
-    height: 100vh;
-    gap: 200px;
+    height: 60vh;
   }
   .section1_banner h2 {
     font-size: 50px;
     text-align: center;
-  } 
-  /* .button_wrap {
+  }
+  .button_wrap {
     gap: 20px;
     margin-top: 50px;
   }
-
-
-  main::after {
-    height: 100vh;
+  .aboutme_wrap {
+    flex-direction: column;
   }
-  .section1_banner {
-    display: block;
-    padding: 0 20px;
-  }
-  .section1_banner_left {
+  .section2_aboutme .aboutme_wrap {
     width: 100%;
-    height: 100vh;
-    gap: 200px;
+    height: 710px;
   }
-  .section1_banner h2 {
-    font-size: 43px;
-    text-align: center;
-  } */
+
+  .aboutme_wrap .aboutme2 {
+    width: 100%;
+    height: 290px;
+    padding-bottom: 0;
+  }
+  .aboutme_wrap .aboutme3 {
+    width: 100%;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .con1111 h5 {
+    font-size: 14px;
+  }
+  .con2222 {
+    font-size: 16px;
+  }
+  .contents_right {
+    height: 600px;
+  }
+  .contents_left {
+    height: 500px;
+  }
+  .mockup {
+    height: 500px;
+  }
+  .mockup.pc .mask {
+    height: 500px;
+    top: 22px;
+  }
+  .section4_skills {
+    flex-direction: column;
+  }
+  .section4_skills_text {
+    width: 100%;
+  }
+  .section4_skills_contents_wrap {
+    width: 100%;
+  }
+
+  .circular-pbar {
+    width: 60px;
+    height: 60px;
+  }
+  .circular-pbar-counter {
+    font-size: 14px;
+  }
+  .section4_skills_contents_wrap h5 {
+    font-size: 10px;
+  }
+  .section4_skills_contents_top {
+    margin-top: 30px;
+  }
+  .section4_skills_contents_bottom {
+    margin-top: 20px;
+  }
+  .section4_skills_contents .skills_des {
+    margin-top: 10px;
+  }
+  .section5_design {
+    display: none;
+  }
+  .footer {
+    margin-top: 100px;
+  }
+  .button_wrap2 .button_wrap_left span {
+    width: 100px;
+  }
 }
