@@ -270,7 +270,7 @@
   }
 }
 
-/* @media (max-width: 425px) {
+@media (max-width: 425px) {
   .followAnimation {
     display: none;
   }
@@ -286,8 +286,19 @@
   .menu_wrap nav{
     display: none;
   }
-  
-  .button_wrap {
+  .section1_banner_right{
+    display: none;
+  }
+  .section1_banner_left {
+    width: 100%;
+    height: 100vh;
+    gap: 200px;
+  }
+  .section1_banner h2 {
+    font-size: 50px;
+    text-align: center;
+  } 
+  /* .button_wrap {
     gap: 20px;
     margin-top: 50px;
   }
@@ -308,5 +319,5 @@
   .section1_banner h2 {
     font-size: 43px;
     text-align: center;
-  }
-} */
+  } */
+}
