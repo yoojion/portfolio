@@ -846,7 +846,7 @@ arrow_up
 */
 .arrow-up {
   position: fixed;
-  z-index: 999;
+  z-index: 9999999;
   bottom: 35px;
   right: 35px;
   width: 50px;
@@ -873,4 +873,5 @@ arrow_up
 }
 .followAnimation {
   font-weight: 900;
+  z-index: 99999999;
 }
