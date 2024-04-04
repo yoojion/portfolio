@@ -420,10 +420,18 @@ section3_project
   background: url(../source/image/screen_3.png);
   background-size: 100%;
 }
+.section3_project_contents .contents .n4 {
+  background: url(../source/image/fifago.jpg);
+  background-size: 100%;
+  background-position: 0% 43%;
+}
 .sec3-2 .button_wrap span {
   width: calc(100% / 2);
 }
 .sec3-3 .button_wrap span {
+  width: calc(100% / 2);
+}
+.sec3-4 .button_wrap span {
   width: calc(100% / 2);
 }
 .section3_project .button_wrap {
@@ -754,6 +762,9 @@ section5_design
 .section5_design_contents_wrap .design .des {
   text-align: justify;
   line-height: 150%;
+}
+.section5_design_contents_wrap .title{
+  margin-top: 20px;
 }
 
 /* 

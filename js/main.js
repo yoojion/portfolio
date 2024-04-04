@@ -201,3 +201,29 @@ ScrollTrigger.create({
     gsap.fromTo(left3, { xPercent: -100 }, { xPercent: 0, duration: 1 });
   },
 });
+
+const pc4 = document.querySelector(".sec3-4 .pc");
+const left4 = document.querySelector(".sec3-4 .contents_left");
+const pcS4 = pc4.querySelector(".sec3-4 .screen");
+const pcM4 = pc4.querySelector(".sec3-4 .mask");
+
+const aniUp4 = (mask, screen) => {
+  let newH11 = mask.clientHeight;
+  let newH22 = screen.clientHeight;
+  let height33 = newH11 - newH22;
+  gsap.to(screen, { y: height33, duration: 2 });
+};
+const aniDown4 = (screen) => {
+  gsap.to(screen, { y: 0, duration: 2 });
+};
+ScrollTrigger.create({
+  trigger: ".sec3-4",
+  start: "top bottom",
+  end: "bottom top",
+  scrub: 50,
+  onEnter: () => {
+    pcM4.addEventListener("mouseenter", () => aniUp2(pcM2, pcS4));
+    pcM2.addEventListener("mouseleave", () => aniDown2(pcS4));
+    gsap.fromTo(left4, { xPercent: 100 }, { xPercent: 0, duration: 1 });
+  },
+});
