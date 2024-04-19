@@ -1,6 +1,6 @@
-# 프로젝트명
+# 유지원 포트폴리오
 
-> 간략한 프로젝트 소개 문구를 작성합니다.
+> 유연한 감각의 디블리셔 유지원의 포트폴리오입니다. 감사합니다.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
